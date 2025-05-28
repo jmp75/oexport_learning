@@ -4,6 +4,8 @@
 
 ## Simpletest
 
+### Linux
+
 Using Lazarus on Linux Debian, adapting from [oexport-help/getting-started/](https://www.kluug.at/oexport-help/getting-started/)
 
 ```
@@ -36,4 +38,31 @@ EAccessViolation: Access violation
   $000000000043D753  SAVETOFILE,  line 11231 of OExport.pas
   $00000000004015D5  CREATEDOCUMENT,  line 45 of simpletest.lpr
   $0000000000401635  main,  line 56 of simpletest.lpr
+```
+
+### Windows
+
+Same thing:
+
+```
+C:\Users\abcacb\src\oexport_learning>simpletest.exe
+An unhandled exception occurred at $000000010016BACE:
+EAccessViolation: Access violation
+  $000000010016BACE  INITIALIZECRITICALSECTION,  line 666 of include/winapi.inc
+  $00000001000AA2AA  DOLOCKCANVAS,  line 446 of include/canvas.inc
+  $000000010010D18B
+  $00000001000AD172  LOCK,  line 1852 of include/canvas.inc
+  $0000000100091002  _GETDIGITEXTENT,  line 85 of ../../units/OExport_Vcl.pas
+  $000000010002C18B  GETEXCELDEFFONTWIDTH,  line 11336 of ../../units/OExport.pas
+  $0000000100037DE6  CREATESHEET,  line 14790 of ../../units/OExport.pas
+  $0000000100034DA4  CREATECONTENTS,  line 14157 of ../../units/OExport.pas
+  $000000010003B7FB  DOEXPORT,  line 15259 of ../../units/OExport.pas
+  $000000010002C664  _SAVETOSTREAM,  line 11534 of ../../units/OExport.pas
+  $000000010002BDC8  SAVETOFILE,  line 11212 of ../../units/OExport.pas
+  $000000010002BEE8  SAVETOFILE,  line 11231 of ../../units/OExport.pas
+  $0000000100001B66  CREATEDOCUMENT,  line 45 of simpletest.lpr
+  $0000000100001BAA  main,  line 56 of simpletest.lpr
+  $0000000100001BC6
+  $0000000100014DB0
+  $00000001000018A0
 ```
